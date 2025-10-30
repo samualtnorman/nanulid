@@ -1,0 +1,13 @@
+{
+	"type": "module",
+	"dependencies": {
+		"@samual/types": "jsr:0.0.2-23ffc7f",
+		"@std/encoding": "jsr:^1.0.10"
+	},
+	"devDependencies": {
+		"@samual/rolldown-config": "jsr:0.0.1-876b675",
+		"rolldown": "1.0.0-beta.45",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.4"
+	}
+}
