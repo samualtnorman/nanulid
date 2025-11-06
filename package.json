@@ -18,7 +18,9 @@
 	},
 	"devDependencies": {
 		"@samual/rolldown-config": "jsr:0.0.1-876b675",
+		"@types/node": "^24.10.0",
 		"rolldown": "1.0.0-beta.45",
+		"semver": "^7.7.3",
 		"typescript": "^5.9.3",
 		"vitest": "^4.0.4"
 	}
