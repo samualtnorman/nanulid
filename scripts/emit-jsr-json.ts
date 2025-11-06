@@ -11,7 +11,7 @@ const imports = Object.fromEntries(Object.entries(dependencies).map(
 ))
 
 writeFileSync("dist/jsr.json", JSON.stringify(
-	{ name: `@sn/ulid`, version, license, exports: { ".": "./default.js" }, imports },
+	{ name: `@sn/nanulid`, version, license, exports: { ".": "./default.js" }, imports },
 	undefined,
 	"\t"
 ))
