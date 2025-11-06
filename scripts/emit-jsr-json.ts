@@ -7,7 +7,7 @@ const { version, license, dependencies } = packageJson
 makeDirectorySync("dist", { recursive: true })
 
 const imports = Object.fromEntries(Object.entries(dependencies).map(
-	([ name, version ]) => [ name, `jsr:${name}@${version}` ]
+	([ name, version ]) => [ name, `jsr:${name}@${version.slice(4)}` ]
 ))
 
 writeFileSync("dist/jsr.json", JSON.stringify(
