@@ -31,6 +31,10 @@ export const setNanulidBytesTime = (nanulidBytes: NanulidBytes, time = Date.now(
 	nanulidBytes[5] = time
 }
 
+export const getNanulidBytesTime = (nanulidBytes: NanulidBytes): number =>
+	(nanulidBytes[0]! * (2 ** 40)) + (nanulidBytes[1]! * (2 ** 32)) + (nanulidBytes[2]! << 24) +
+		(nanulidBytes[3]! << 16) + (nanulidBytes[4]! << 8) + (nanulidBytes[5]!)
+
 const RANDOM_BYTES_SIZE = NanulidBytesRandomSectionSize * 256
 const randomBytes = new Uint8Array(RANDOM_BYTES_SIZE)
 let randomBytesOffset = 0
@@ -78,3 +82,12 @@ export const nanulidBytesToCrockford = (nanulidBytes: NanulidBytes): NanulidCroc
 export const nanulidBase64ToBytes = (nanulidBase64: NanulidBase64): NanulidBytes => decodeBase64Url(nanulidBase64) as NanulidBytes
 
 export const makeNanulidCrockford = (): NanulidCrockford => nanulidBytesToCrockford(makeNanulidBytes())
+
+if (import.meta.vitest) {
+	const { test, expect } = import.meta.vitest
+
+	test(`getting time`, () => {
+		expect(getNanulidBytesTime(nanulidBase64ToBytes(`AZp868zqDHzM_4-vaqhobaPvDRUh` as NanulidBase64)))
+			.toBe(1763032419562)
+	})
+}
