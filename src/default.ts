@@ -32,7 +32,7 @@ export const setNanulidBytesTime = (nanulidBytes: NanulidBytes, time = Date.now(
 }
 
 export const getNanulidBytesTime = (nanulidBytes: NanulidBytes): number =>
-	(nanulidBytes[0]! * (2 ** 40)) + (nanulidBytes[1]! * (2 ** 32)) + (nanulidBytes[2]! << 24) +
+	(nanulidBytes[0]! * (2 ** 40)) + (nanulidBytes[1]! * (2 ** 32)) + (nanulidBytes[2]! * (2 ** 24)) +
 		(nanulidBytes[3]! << 16) + (nanulidBytes[4]! << 8) + (nanulidBytes[5]!)
 
 const RANDOM_BYTES_SIZE = NanulidBytesRandomSectionSize * 256
