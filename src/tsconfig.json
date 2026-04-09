@@ -4,6 +4,7 @@
 	"compilerOptions": {
 		"declaration": true,
 		"outDir": "../dist",
-		"rootDir": "."
+		"rootDir": ".",
+		"types": [ "babel-plugin-here/env", "vitest/importMeta" ]
 	}
 }

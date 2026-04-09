@@ -13,12 +13,16 @@
 		".": "./default.js"
 	},
 	"dependencies": {
+		"@samual/assert": "^0.0.1",
 		"@samual/types": "jsr:0.0.2-23ffc7f",
 		"@std/encoding": "jsr:^1.0.10"
 	},
 	"devDependencies": {
+		"@babel/plugin-syntax-typescript": "^7.28.6",
+		"@rollup/plugin-babel": "^7.0.0",
 		"@samual/rolldown-config": "jsr:0.0.1-876b675",
 		"@types/node": "^24.10.0",
+		"babel-plugin-here": "1.0.3-d254d5b",
 		"jsr": "^0.13.5",
 		"rolldown": "1.0.0-beta.45",
 		"semver": "^7.7.3",
